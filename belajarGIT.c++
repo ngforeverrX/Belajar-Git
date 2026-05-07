@@ -2,5 +2,5 @@
 using namespace std;
 
 int main() {
-    cout << "Git Pertama";
+    cout << "Git pertama setelah commit";
 }
