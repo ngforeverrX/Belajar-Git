@@ -81,51 +81,51 @@ void cariLagu(string judul) {
 int main() {
     int menu;
      
-    do {
-        cout << "\n======= MENU =======\n";
-        cout << "1. Tambah Lagu \n2. Putar Lagu \n3. Tampilkan Lagu"
-                 "\n4. Cari Lagu \n5. Keluar\n";
-        cout << "Pilih: ";
-        cin >> menu;
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+//     do {
+//         cout << "\n======= MENU =======\n";
+//         cout << "1. Tambah Lagu \n2. Putar Lagu \n3. Tampilkan Lagu"
+//                  "\n4. Cari Lagu \n5. Keluar\n";
+//         cout << "Pilih: ";
+//         cin >> menu;
+//         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-        switch (menu) {                
-            case 1: {
-                string tambahJudul;
-                cout << "Tambah Lagu: ";
-                getline(cin, tambahJudul);
-                tambahLagu(tambahJudul);
-                break;
-            }
+//         switch (menu) {                
+//             case 1: {
+//                 string tambahJudul;
+//                 cout << "Tambah Lagu: ";
+//                 getline(cin, tambahJudul);
+//                 tambahLagu(tambahJudul);
+//                 break;
+//             }
 
-            case 2:
-                putarLagu();
-                break;
+//             case 2:
+//                 putarLagu();
+//                 break;
             
-            case 3:
-                tampilkanLagu();
-                break;
+//             case 3:
+//                 tampilkanLagu();
+//                 break;
             
-            case 4: {
-                if (head == NULL) {
-                cout << "Lagu Kosong \n";
-                break;     
-                }
+//             case 4: {
+//                 if (head == NULL) {
+//                 cout << "Lagu Kosong \n";
+//                 break;     
+//                 }
 
-                string cari;
-                cout << "Judul Lagu: ";
-                getline(cin, cari);
-                cariLagu(cari);
-                break;
-            }
+//                 string cari;
+//                 cout << "Judul Lagu: ";
+//                 getline(cin, cari);
+//                 cariLagu(cari);
+//                 break;
+//             }
 
-            case 5:
-                cout << "Program Selesai";
-                break;
+//             case 5:
+//                 cout << "Program Selesai";
+//                 break;
             
-            default:
-                cout << "Pilihan tidak valid\n";
-        }  
-    } while (menu != 5);       
-    return 0;
+//             default:
+//                 cout << "Pilihan tidak valid\n";
+//         }  
+//     } while (menu != 5);       
+//     return 0;
 }
