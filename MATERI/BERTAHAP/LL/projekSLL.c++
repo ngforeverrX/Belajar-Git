@@ -80,7 +80,8 @@ void cariLagu(string judul) {
 
 int main() {
     int menu;
-     
+
+     // Pakai switch case
 //     do {
 //         cout << "\n======= MENU =======\n";
 //         cout << "1. Tambah Lagu \n2. Putar Lagu \n3. Tampilkan Lagu"
@@ -128,4 +129,37 @@ int main() {
 //         }  
 //     } while (menu != 5);       
 //     return 0;
+
+// Pakai if else
+    while (true) {
+        cout << "\n======= MENU =======\n";
+        cout << "1. Tambah Lagu \n2. Putar Lagu \n3. Tampilkan Lagu"
+                  "\n4. Cari Lagu \n5. Keluar\n";
+         cout << "Pilih: ";
+         cin >> menu;
+         cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (menu == 1) {
+            string tambahJudul;
+            cout << "Tambah Lagu: ";
+            getline(cin, tambahJudul);
+            tambahLagu(tambahJudul);  
+        }else if (menu == 2) {
+            putarLagu();
+        } else if (menu == 3) {
+            tampilkanLagu();
+        } else if (menu == 4) {
+            if (head == NULL) {
+                cout << "Lagu Kosong \n";
+                break;     
+            }
+            string cari;
+            cout << "Judul Lagu: ";
+            getline(cin, cari);
+            cariLagu(cari);
+        } else if (menu == 5) {
+            cout << "Program Selesai";
+            break;
+        }
+    }
+    return 0;
 }
